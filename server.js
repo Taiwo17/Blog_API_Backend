@@ -12,12 +12,6 @@ const mongoSanitize = require('express-mongo-sanitize')
 // Instatiating the server
 const server = express()
 
-// Instatiating the cors confirguration
-const corsOptions = {
-  origin: 'http://localhost:4000/',
-  optionsSuccessStatus: 200,
-}
-
 // Database connection
 const connectDB = require('./config/database')
 

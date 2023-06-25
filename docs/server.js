@@ -1,7 +1,7 @@
 module.exports = {
   servers: [
     {
-      url: 'https://blogapibackend.up.railway.app/',
+      url: 'https://blogapibackend-production.up.railway.app/',
       description: 'Live Server',
     },
   ],

@@ -19,15 +19,6 @@ module.exports = {
         description: 'Delete a single blog post',
       },
     ],
-    requestBody: {
-      content: {
-        'application/json': {
-          schema: {
-            $ref: '#/components/schemas/Blog',
-          },
-        },
-      },
-    },
     responses: {
       201: {
         description: 'Delete Single post successfully',

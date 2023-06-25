@@ -51,7 +51,7 @@ server.use(cookieParser()) // Use in setting the cookie parser
 server.use(express.json()) // Used in passing json application
 server.use(express.urlencoded({ extended: false })) // Passing form
 server.use(express.static('public')) // Used in passing static file
-server.use(cors(corsOptions)) // Cors Middlewares
+server.use(cors()) // Cors Middlewares
 
 // Defining the swagger page
 server.use('/docs', swaggerUi.serve, swaggerUi.setup(docs, { explorer: true }))

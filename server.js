@@ -1,7 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
 const swaggerUi = require('swagger-ui-express')
-const PORT = process.env.LOCAL
+const PORT = process.env.PORT || process.env.LOCAL
 const docs = require('./docs')
 const cors = require('cors')
 
@@ -78,15 +78,6 @@ connectDB()
   .then(() => console.log(`Database connected`))
   .catch('Error has occured')
 
-const app = server.listen(PORT, () =>
+server.listen(PORT, () =>
   console.log(`The server is listening on port ${PORT}`)
 )
-
-// Handling unhandled rejection
-process.on('unhandledRejection', (err) => {
-  console.log(`Error ${err.message}`)
-  console.log(`Shutting down the server due to unhandled rejection`)
-  app.close(() => {
-    process.exit(1)
-  })
-})

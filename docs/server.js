@@ -1,7 +1,7 @@
 module.exports = {
   servers: [
     {
-      url: 'http://localhost:4000/api/v1',
+      url: 'https://blogapibackend.up.railway.app/',
       description: 'Local Server',
     },
   ],
